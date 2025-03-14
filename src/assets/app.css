@@ -1,0 +1,50 @@
+.add-form {
+  margin: 0 auto;
+  padding: 1.5rem;
+  max-width: 32rem;
+}
+.add-form div {
+  display: flex;
+  margin: 10px 0px;
+}
+.add-form label {
+  width: 30%;
+  text-align: left;
+  padding-top: 10px;
+}
+.add-form input, select {
+  width: 70%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+.add-form button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: solid;
+  border-radius: 0.25rem;
+}
+.add-form button:hover {
+  background-color: #1d4ed8;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between; /* Pushes elements to opposite sides */
+  align-items: center; /* Aligns items vertically */
+  width: 100%;
+  max-width: 350px; /* Adjust as needed */
+  margin: auto; /* Centers container */
+  padding: 10px;
+}
+.filter select {
+  flex-grow: 1; /* Makes select take available space */
+  max-width: 200px; /* Prevents it from being too large */
+  padding: 5px;
+}
+.filter button {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
