@@ -22,7 +22,7 @@
     </template>
     <template #actions>
         <button @click="isEditing = !isEditing">Edit</button>
-        <button>Delete</button>
+        <button @click="removeTodo">Delete</button>
     </template>
   </Card>
 </template>
@@ -49,14 +49,14 @@ const saveEdit = () => {
     alert('Please enter a to-do item!');
     return;
   }
-  appStore.updateTodo({
-    id: props.todo.id,
-    text: editedText.value,
-    priority: props.todo.priority,
-    state: props.todo.state
-  });
+  props.todo.text = editedText.value.trim()
+  todoStore.updateTodo(props.todo);
 
   isEditing.value = false;
+}
+
+const removeTodo = () => {
+  todoStore.deleteTodo(props.todo.id)
 }
 </script>
 

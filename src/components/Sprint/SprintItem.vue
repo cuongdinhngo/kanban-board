@@ -12,11 +12,13 @@ const isEditing = ref(false);
 const editedName = ref(props.sprint.name);
 
 const saveEdit = () => {
-  if (!editedText.value.trim()) {
+  if (!editedName.value.trim()) {
     alert('Please enter a to-do item!');
     return;
   }
 
+  props.sprint.name = editedName.value.trim();
+  sprintStore.updateSprint(props.sprint);
   isEditing.value = false;
 }
 

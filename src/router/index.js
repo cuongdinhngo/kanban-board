@@ -18,11 +18,6 @@ const router = createRouter({
       path: '/sprint',
       name: 'sprint',
       component: () => import('@/components/Sprint/SprintOverview.vue')
-    },
-    {
-      path: '/config',
-      name: 'config',
-      component: () => import('@/components/Config/Config.vue')
     }
   ],
 })

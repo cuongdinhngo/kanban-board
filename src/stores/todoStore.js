@@ -23,6 +23,12 @@ export const todoStore = {
     this.saveLocalStorage();
   },
 
+  deleteTodo(todoId) {
+    const updatedTodos = this.todos.value.filter((item) => item.id !== todoId);
+    this.refreshTodos(updatedTodos);
+    console.log(`Successfully deleted todo #${todoId}`);
+  },
+
   fetchTodos() {
     const storedTodos = localStorage.getItem('todos');
     this.todos.value = storedTodos ? JSON.parse(storedTodos) : []

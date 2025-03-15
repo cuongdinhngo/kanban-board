@@ -30,5 +30,8 @@ onMounted(() => {
   sprintList.value = sprintStore.fetchSprints();
 })
 
-const filteredTodoList = computed(() => todoList.value.filter((item) => item.sprintId === sprintSearch.value));
+const filteredTodoList = computed(() => {
+  console.log('computing todo ...', sprintSearch.value);
+  return todoStore.todos.value.filter((item) => item.sprintId === sprintSearch.value);
+});
 </script>
